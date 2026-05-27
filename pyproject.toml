@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mdnator"
+version = "0.1.0"
+description = "Convert files to Markdown using markitdown"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+    {name = "Javier Fernández", email = "jfernandezmo@ayesa.com"},
+]
+dependencies = [
+    "markitdown[all]",
+    "tqdm",
+]
+
+[project.scripts]
+mdnator = "mdnator.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["mdnator*"]
