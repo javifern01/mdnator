@@ -58,6 +58,9 @@ def _truncate(name: str, max_len: int) -> str:
 
 
 def main() -> None:
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    sys.stderr.reconfigure(encoding="utf-8", errors="replace")
+
     parser = argparse.ArgumentParser(
         description="Convert files to Markdown using markitdown."
     )
